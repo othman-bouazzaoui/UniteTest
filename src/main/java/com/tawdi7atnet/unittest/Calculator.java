@@ -4,7 +4,8 @@ import java.util.function.BiFunction;
 
 public class Calculator {
 
-    public static BiFunction<Integer,Integer, Integer> somme = (x,y) -> x+y;
+    public static BiFunction<Integer,Integer, Integer> somme = Integer::sum;
+
     public static BiFunction<Integer,Integer, Integer> multiply = (x,y) -> x*y;
 
     public static void methodTakeTime(){
