@@ -2,7 +2,7 @@ package com.tawdi7atnet.unittest;
 
 import java.util.function.Supplier;
 
-public class FunctionsClass {
+public class N2FunctionsClass {
 
     public static Supplier<String> dbName = () -> "GSTOCK";
 

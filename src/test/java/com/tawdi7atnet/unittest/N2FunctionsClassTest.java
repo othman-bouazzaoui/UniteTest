@@ -5,12 +5,12 @@ import static org.assertj.core.api.Assertions.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FunctionsClassTest {
+public class N2FunctionsClassTest {
 
     //L'utilisation du assertJ au lieu de JUnit
     @Test
     void dbNameTest() {
-        assertEquals("GSTOCK",FunctionsClass.dbName.get());
+        assertEquals("GSTOCK", N2FunctionsClass.dbName.get());
 
     }
 
@@ -21,7 +21,7 @@ public class FunctionsClassTest {
         int b = 20;
 
         //WHEN
-        int somme = FunctionsClass.addition(a,b);
+        int somme = N2FunctionsClass.addition(a,b);
 
         //THEN
         assertThat(30).isEqualTo(somme);

@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.TimeUnit;
 
-public class CaculatorTest {
+public class N1FunctionsClassTest {
 
     private static Instant startAt=Instant.now();
 
@@ -42,7 +42,7 @@ public class CaculatorTest {
         int b = 5;
 
         //étape Act : j'effectue l'action sur la classe à tester
-        Integer resultat = Calculator.somme.apply(a,b);
+        Integer resultat = N1FunctionsClass.somme.apply(a,b);
 
         //étape Assert : je vérifie les résultats (sortants) de l'action.
         assertEquals(15,resultat);
@@ -55,13 +55,14 @@ public class CaculatorTest {
     @ValueSource(ints = {10,20,30})
     //@CsvSource() il est possible de faire appel un format csv
     //@CsvSource({ "1,1,2", "2,3,5", "42,57,99" })
+
     void multiply(int args){
         //étape Arrange : je paramètre les entrants des tests
         int a = args;
         int b = 0;
 
         //étape Act : j'effectue l'action sur la classe à tester
-        Integer resultat = Calculator.multiply.apply(a,b);
+        Integer resultat = N1FunctionsClass.multiply.apply(a,b);
 
         //étape Assert : je vérifie les résultats (sortants) de l'action.
         assertEquals(0,resultat);
@@ -71,6 +72,6 @@ public class CaculatorTest {
     @Timeout(value = 3000,unit = TimeUnit.MILLISECONDS)
     @Test
     void methodTakeTimeTest(){
-        Calculator.methodTakeTime();
+        N1FunctionsClass.methodTakeTime();
     }
 }
